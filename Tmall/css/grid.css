@@ -16,13 +16,17 @@
     background-color: #d3c8c8;
     margin: 100px auto 0;
 }
-.items {
-    background-color: #fff;
+.subbox {
     position: relative;
     display: flex;
     align-items: center; 
     justify-content: center;
+    
+}
+.items {
     transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
 }
 #btnRefresh {
     flex-direction: column;
@@ -35,13 +39,21 @@
 }
 .back, .front {
     position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
 }
 .back {
     transform: rotateY(180deg);
 }
-.items:hover .cover {
+.subbox:hover .cover {
     opacity: 1;
+    transition: .3s linear;
 }
+
 .iconRefresh {
     width: 28px;
     height: 28px;
@@ -57,7 +69,7 @@
 }
 .cover {
     position: absolute;
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, .6);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
